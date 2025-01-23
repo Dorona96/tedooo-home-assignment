@@ -1,0 +1,73 @@
+@use "../../styles/global.scss" as *;
+
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  width: calc(100vw - 40px);
+  background-color: white;
+  box-shadow: 0 7px 7px 0 #6d6d6d41;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  position: sticky;
+
+  .nav-wrapper {
+    max-width: 1120px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    color: $grey;
+    border: none;
+    border-radius: 32px;
+    padding: 5px 10px 5px 30px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-color: $background-color;
+    background-image: url("../../assets/search.svg");
+    outline: none;
+  }
+
+  div {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+  }
+  a,
+  button {
+    color: $grey;
+    justify-self: center;
+    text-decoration: none;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
+    svg path {
+      stroke: $grey;
+    }
+    @include mobile {
+      span {
+        display: none;
+      }
+    }
+  }
+  a,
+  button:active {
+    span {
+      color: $green;
+    }
+    svg path {
+      stroke: $green;
+    }
+  }
+  button {
+    background: none;
+    border: none;
+  }
+  
+}

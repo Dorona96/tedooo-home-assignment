@@ -1,0 +1,35 @@
+//colors 
+$background-color: #f6f7f7; 
+$blue: #0a66c2;
+$green: #2db8a1;
+$green-yellow: #B8C248; 
+$grey: #949796;
+$btn-grey: #737877;
+
+@function pxToRem($px-value) {
+    @return #{$px-value/ 16px}rem;
+}
+
+//screen sizes mixins
+@mixin mobile {
+    @media (max-width: 480px) and (orientation: portrait){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+//shorthand mixin
+@mixin same-height-width($value){
+    width: $value;
+    height: $value;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
